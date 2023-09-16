@@ -31,7 +31,6 @@ public class HamburgerBrett {
         return hmb;
     };
 
-
     @Override
     public String toString() {
         return Arrays.toString(brett);
