@@ -13,7 +13,7 @@ public class HamburgerBrett {
         antall = 0;
     }
 
-    public boolean leggPaa(Hamburger burger) {
+    public synchronized boolean leggPaa(Hamburger burger) {
         if (antall < MAKS){
             brett[antall] = burger;
             antall++;
@@ -22,10 +22,11 @@ public class HamburgerBrett {
             return false;
         }
     }
-    public Hamburger taAv(){
+    public synchronized Hamburger taAv(){
         Hamburger hmb = null;
-        if(antall<0){
+        if(antall>0){
           hmb = brett[antall];
+          brett[antall] = null;
           antall --;
         }
         return hmb;

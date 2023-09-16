@@ -20,6 +20,7 @@ public class Kokk extends Thread{
         this.brett = brett;
         tid = (long) ((Math.random() * (MAX - MIN)) + MIN);
     }
+
     public void stopp() {
         fortsette = false;
     }
@@ -33,8 +34,8 @@ public class Kokk extends Thread{
                 throw new RuntimeException(e);
             }
             boolean god = false;
+            Hamburger hmb = new Hamburger();
             while(!god) {
-                Hamburger hmb = new Hamburger();
                 god = brett.leggPaa(hmb);
                 if(!god) {
                     System.out.println(navn + " (kokk)  er klar med hamburger " + hmb.toString() + ", men brettet er fullt. Venter!");
@@ -45,8 +46,14 @@ public class Kokk extends Thread{
                     }
                 }
             }
+            System.out.println(navn + " (kokk)  la på hamburger" + hmb.toString() + ". Brett: " + brett.toString());
 
         }
 
+    }
+
+    @Override
+    public String toString() {
+        return navn;
     }
 }
