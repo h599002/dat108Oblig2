@@ -25,8 +25,8 @@ public class HamburgerBrett {
     public synchronized Hamburger taAv(){
         Hamburger hmb = null;
         if(antall>0){
-          hmb = brett[antall];
-          brett[antall] = null;
+          hmb = brett[antall-1];
+          brett[antall-1] = null;
           antall --;
         }
         return hmb;
