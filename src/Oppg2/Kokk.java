@@ -47,7 +47,6 @@ public class Kokk extends Thread{
                 }
             }
             System.out.println(navn + " (kokk)  la på hamburger" + hmb.toString() + ". Brett: " + brett.toString());
-
         }
 
     }

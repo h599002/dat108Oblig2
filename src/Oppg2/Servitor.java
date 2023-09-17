@@ -43,6 +43,7 @@ public class Servitor extends Thread{
                 } else {
                     god = true;
                     System.out.println(navn + " (servitør) tok av hamburger " + hmb.toString() + "." + brett.toString());
+
                 }
             }
 
