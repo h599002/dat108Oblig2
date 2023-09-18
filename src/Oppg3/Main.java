@@ -44,11 +44,11 @@ public class Main {
 
         for(Kokk t : kokker){
             t.stopp();
-            //t.join();
+
         }
         for(Servitor t : servitorer){
             t.stopp();
-            // Burde man ha t.join(); også her?
+
         }
     }
 }
